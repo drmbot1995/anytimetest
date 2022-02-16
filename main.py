@@ -1,4 +1,4 @@
-﻿from pyrogram.errors.exceptions.bad_request_400 import StickerEmojiInvalid
+from pyrogram.errors.exceptions.bad_request_400 import StickerEmojiInvalid
 import requests
 import json
 import subprocess
@@ -450,9 +450,9 @@ async def account_login(bot: Client, m: Message):
                 getstatusoutput(f'curl "{rout}" -c "cookie.txt"')
                 cook = "cookie.txt"            
             elif raw_text0 in "anytimelearning":
-                 y2= url.replace("/", "%2F")
-#                 rout = f"https://live.anytimelearning.in/?route=common/ajax&mod=liveclasses&ack=getcustompolicysignedcookiecdn&stream=https%3A%2F%2Fvodcdn.anytimelearning.in%2Flivehttporigin%2F{y[56:-14]}%2Fmaster.m3u8"
-                rout=f"https://live.anytimelearning.in/?route=common/ajax&mod=liveclasses&ack=getcustompolicysignedcookiecdn&stream=https%3A%2F%2Fvodcdn.anytimelearning.in%2F{y[39:-14]}%2Fmaster.m3u8"
+                y2= url.replace("/", "%2F")
+#                 rout = f"https://live.anytimelearning.in/?route=common/ajax&mod=liveclasses&ack=getcustompolicysignedcookiecdn&stream=https%3A%2F%2Fvodcdn.anytimelearning.in%2Flivehttporigin%2F{y[49:-14]}%2Fmaster.m3u8"
+                rout=f"https://live.anytimelearning.in/?route=common/ajax&mod=liveclasses&ack=getcustompolicysignedcookiecdn&stream=https%3A%2F%2Fvodcdn.anytimelearning.in%2F{y[32:-14]}%2Fmaster.m3u8"
                 getstatusoutput(f'curl "{rout}" -c "cookie.txt"')              
                 cook = "cookie.txt"
                 
@@ -563,15 +563,3 @@ async def adda_pdf(bot: Client, m: Message):
         await m.reply_text(e)
     await m.reply_text("Done")
 bot.run()
-
-
-
-
-
-
-
-
-
-
-
-
