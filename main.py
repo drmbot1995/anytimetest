@@ -397,7 +397,7 @@ async def account_login(bot: Client, m: Message):
         arg = 0
     
     
-    editable = await m.reply_text(f"**Copy Paste the App Name of which you want to download videos.**\n\n`vikramjeet`\n\n`sure60`\n\n`anytimelearning`")
+    editable = await m.reply_text(f"**Copy Paste the App Name of which you want to download videos.**\n\n`anytimelearning`")
     input0: Message = await bot.listen(editable.chat.id)
     raw_text0 = input0.text
     
@@ -434,22 +434,15 @@ async def account_login(bot: Client, m: Message):
             # cc = f'>> **Name :** {name}\n>> **Title :** {raw_text0}\n\n>> **Index :** {count}'
 
 
-            if raw_text0 in "vikramjeet" :
+            if raw_text0 in "anytimelearning" :
                 
                 y= url.replace("/", "%2F")
-#                 rout = f"https://www.toprankers.com/?route=common/ajax&mod=liveclasses&ack=getcustompolicysignedcookiecdn&stream=https%3A%2F%2Fsignedsec.toprankers.com%2Flivehttporigin%2F{y[56:-14]}%2Fmaster.m3u8"
-                rout =f"https://www.toprankers.com/?route=common/ajax&mod=liveclasses&ack=getcustompolicysignedcookiecdn&stream=https%3A%2F%2Fsignedsec.toprankers.com%2F{y[39:-14]}%2Fmaster.m3u8"
+#                 rout = f"https://live.anytimelearning.in/?route=common/ajax&mod=liveclasses&ack=getcustompolicysignedcookiecdn&stream=https%3A%2F%2Fvodcdn.anytimelearning.in%2Flivehttporigin%2F{y[56:-14]}%2Fmaster.m3u8"
+                rout =f"https://live.anytimelearning.in/?route=common/ajax&mod=liveclasses&ack=getcustompolicysignedcookiecdn&stream=https%3A%2F%2Fvodcdn.anytimelearning.in%2F{y[39:-14]}%2Fmaster.m3u8"
                 getstatusoutput(f'curl "{rout}" -c "cookie.txt"')
                 cook = "cookie.txt"
                 # print (rout)
                 # print(url)
-                      
-            elif raw_text0 in "anytimelearning":
-                y1= url.replace("/", "%2F")
-#                 rout = f"https://live.anytimelearning.in/?route=common/ajax&mod=liveclasses&ack=getcustompolicysignedcookiecdn&stream=https%3A%2F%2Fvodcdn.anytimelearning.in%2Flivehttporigin%2F{y[49:-14]}%2Fmaster.m3u8"
-                rout=f"https://live.anytimelearning.in/?route=common/ajax&mod=liveclasses&ack=getcustompolicysignedcookiecdn&stream=https%3A%2F%2Fvodcdn.anytimelearning.in%2F{y[32:-14]}%2Fmaster.m3u8"
-                getstatusoutput(f'curl "{rout}" -c "cookie.txt"')              
-                cook = "cookie.txt"
                 
             name = f'{str(count).zfill(3)}) {name1}'    
             Show = f"**Downloading:-**\n\n**Name :-** `{name}`\n\n**Url :-** `{url}`\n\n**rout** :- `{rout}`"
